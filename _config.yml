@@ -20,15 +20,15 @@ texture:
   showNav: true
   showPicker: false
   navigation:
-    - title: My Work
-      url: "/my-work"
-    - title: Resume
-      url: "/resume"
+    - title: Home
+      url: "https://sbrblee.github.io/SAILAB-freshmen-study.github.io/#"
+    - title: About
+      url: ""
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
-header_pages:
-- about.md
+# header_pages:
+# - about.md
 
 plugins:
   - jekyll-seo-tag
