@@ -1,10 +1,10 @@
 title: 대학원생 AI 스터디 블로그
 author: Subeen Lee
 email: sbrblee7@gmail.com
-description: > # this means to ignore newlines until "show_exerpts:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+# description: > # this means to ignore newlines until "show_exerpts:"
+#   Write an awesome description for your new site here. You can edit this
+#   line in _config.yml. It will appear in your document head meta (for
+#   Google search results) and in your feed.xml site description.
 show_excerpts: true # set to true to show excerpts on the homepage
 # baseurl: /texture
 
@@ -15,8 +15,8 @@ sass:
 
 permalink: /posts/:title/
 texture:
-  title: Subeen Lee
-  tagline: Master Program Student in KAIST Kim Jaechul AI Graduate School
+  title: Anonymous AI Study Group
+  tagline: eXplainable AI
   date_format: "%b %-d, %Y"
   style: black
   showNav: false

@@ -1,8 +1,5 @@
----
-layout: post
-title:  "[Basic Study on XAI] Attention is not Explanation"
-date:   2024-09-01 00:00:00 +82
----
+# Attention is not Explanation
+
 ### Abstract
 
 - attention score → often presented as communicating the relative importance of inputs
