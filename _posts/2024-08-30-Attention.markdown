@@ -2,7 +2,10 @@
 layout: post
 title:  "[XAI] Attention is not Explanation"
 date:   2024-08-30 16:00:00 +0900
+author: Subeen Lee
+categories: [XAI, Attention Mechanism]
 ---
+Are Attention weights Explanation?
 
 ### Abstract
 
