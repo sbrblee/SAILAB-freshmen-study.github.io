@@ -42,4 +42,4 @@ plugins:
   - jekyll-seo-tag
 #  - jekyll-feed
 
-# remote_theme: samarsault/texture
+remote_theme: samarsault/texture
