@@ -14,11 +14,16 @@ sass:
 permalink: /posts/:title/
 texture:
   title: Anonymous AI Study Group
-  tagline: eXplainable AI
+  tagline: eXplainable AI, Mechanistic Interpretability
   date_format: "%b %-d, %Y"
   style: black
-  showNav: false
+  showNav: true
   showPicker: false
+  navigation:
+    - title: My Work
+      url: "/my-work"
+    - title: Resume
+      url: "/resume"
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
