@@ -10,8 +10,8 @@ sass:
 
 permalink: /posts/:title/
 texture:
-  title: Anonymous AI Study Group
-  tagline: eXplainable AI, Mechanistic Interpretability
+  title: 대학원생 AI 스터디 블로그
+  tagline: eXplainable AI (XAI), Mechanistic Interpretability
   date_format: "%b %-d, %Y"
   style: black
   showNav: true
