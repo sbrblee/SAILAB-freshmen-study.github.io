@@ -18,11 +18,9 @@ texture:
   showPicker: false
   navigation:
     - title: Home
-      url: /layouts/home.html
+      url: "/SAILAB-freshmen-study.github.io/"
     - title: About
-      url: home.html
-    - title: Temp
-      url: /_layouts/home.html
+      url: "/posts/2024-08-30-Attention.markdown"
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
