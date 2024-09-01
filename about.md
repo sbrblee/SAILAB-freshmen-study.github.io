@@ -1,6 +1,6 @@
 ---
-layout: post
-title:  "About Us"
-author: Subeen Lee
+layout: page
+title: About
+permalink: /about/
 ---
 Hi, 
