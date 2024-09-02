@@ -47,7 +47,7 @@ Transformer의 핵심 구성 요소인 attention mechanism은 입력과 입력 �
 - To measure the rank correlation, [Kendall’s Tau](https://en.wikipedia.org/wiki/Kendall_rank_correlation_coefficient) was used. Kendall’s Tau는 [-1, 1]의 범위를 가지며, 1에 가까울수록 양의 상관관계, -1에 가까울수록 음의 상관관계를 가집니다. 절대값이 작을수록 낮은 rank correlation을 가집니다.
 - feature importance computations
     
-    <img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/assets/imgs/2024-05-03-Attention_Explanations/image.png">
+    <img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-05-03-Attention_Explanations/image.png">
 
     - $\hat\alpha$: attention weight
     - $g:=\{g_t\}_{t=1}^T$: gradient-based feature importance
