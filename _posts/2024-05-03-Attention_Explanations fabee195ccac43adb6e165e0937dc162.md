@@ -47,7 +47,7 @@ Transformer의 핵심 구성 요소인 attention mechanism은 입력과 입력 �
 - To measure the rank correlation, [Kendall’s Tau](https://en.wikipedia.org/wiki/Kendall_rank_correlation_coefficient) was used. Kendall’s Tau는 [-1, 1]의 범위를 가지며, 1에 가까울수록 양의 상관관계, -1에 가까울수록 음의 상관관계를 가집니다. 절대값이 작을수록 낮은 rank correlation을 가집니다.
 - feature importance computations
     
-    ![image.png](/imgs/2024-05-03-Attention_Explanations%20fabee195ccac43adb6e165e0937dc162/image.png)
+    ![image.png](./imgs/2024-05-03-Attention_Explanations%20fabee195ccac43adb6e165e0937dc162/image.png)
     
     - $\hat\alpha$: attention weight
     - $g:=\{g_t\}_{t=1}^T$: gradient-based feature importance
@@ -56,7 +56,7 @@ Transformer의 핵심 구성 요소인 attention mechanism은 입력과 입력 �
     - 그림에서는 attention weight과 gradient-based feature importance 사이의 다양한 dataset, task에서의 상관관계를 나타내며, LOO와의 상관관계를 나타낸 figure는 비슷한 개형을 보인다고 합니다.
     - binary text classification task에서 주황색은 positive로 예측된 샘플들, 보라색은 negative로 예측된 샘플들입니다. NLI task에서 주황색은 entailment, 보라색은 contradiction, 초록색은 neutral로 예측된 샘플들입니다.
     
-    ![image.png](/imgs/2024-05-03-Attention_Explanations%20fabee195ccac43adb6e165e0937dc162/image%201.png)
+    ![image.png](../imgs/2024-05-03-Attention_Explanations%20fabee195ccac43adb6e165e0937dc162/image%201.png)
     
 - 측정된 correlation은 약한 양의 상관관계를 가집니다. 그에 비해 attention weight과 LOO 결과는 일관되게 더 강한 상관관계를 가진다고 합니다.
 
