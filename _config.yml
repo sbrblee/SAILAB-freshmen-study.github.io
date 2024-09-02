@@ -29,6 +29,8 @@ lsi: false
 excerpt_separator: "\n\n"
 incremental: false
 
+google_site_verification: "FC4DteQJzPkkGTUiBNLQGyoogO4FLKctgMYhyWXpxRU"
+
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
