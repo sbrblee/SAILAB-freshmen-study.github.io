@@ -1,4 +1,4 @@
--—
+-—-
 
 layout: post
 title: "[XAI] 논문리뷰 - Attention is not Explanation"
@@ -6,13 +6,13 @@ date: 2024-05-03 00:00:00 +0900
 author: Subeen Lee
 categories: [”Attention Mechanism”]
 
-—-
+—--
 
 **Is attention explanation?**
 
 이 포스트에서는 아래 두 논문을 다룹니다.
 
-[1] ****Jain, S., & Wallace, B. C. (2019). **Attention is not explanation**. In *Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)*, pages 3543–3556, Minneapolis, Minnesota. Association for Computational Linguistics. https://aclanthology.org/N19-1357/
+[1] Jain, S., & Wallace, B. C. (2019). **Attention is not explanation**. In *Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)*, pages 3543–3556, Minneapolis, Minnesota. Association for Computational Linguistics. https://aclanthology.org/N19-1357/
 
 [2] Wiegreffe, S., & Pinter, Y. (2019). **Attention is not not explanation**. In *Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)*, pages 11–20, Hong Kong, China. Association for Computational Linguistics. https://aclanthology.org/D19-1002/
 
