@@ -31,3 +31,4 @@ incremental: false
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
