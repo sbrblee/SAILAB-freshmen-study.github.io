@@ -1,10 +1,10 @@
--—-
+---
 layout: post
 title: "[XAI] 논문리뷰 - Attention is not Explanation"
 date: 2024-05-03 00:00:00 +0900
 author: Subeen Lee
 categories: ["Attention Mechanism"]
-—--
+---
 **Is attention explanation?**
 
 이 포스트에서는 아래 두 논문을 다룹니다.
