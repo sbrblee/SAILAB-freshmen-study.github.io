@@ -17,7 +17,7 @@ permalink: /about/
 - Master program student in KAIST Kim Jaechul AI Graduate School (from 2023.2~)
 - **Research interests**: Explainable AI, Large Language Model, Generative AI
 - **e-mail**: ojoo_o@kaist.ac.kr
-- **Personal homepage**: https://github.com/ojoo-J-
+- **Personal homepage**: https://github.com/ojoo-J
 
 ### Name
 
