@@ -56,7 +56,7 @@ Transformer의 핵심 구성 요소인 attention mechanism은 입력과 입력 �
     - 그림에서는 attention weight과 gradient-based feature importance 사이의 다양한 dataset, task에서의 상관관계를 나타내며, LOO와의 상관관계를 나타낸 figure는 비슷한 개형을 보인다고 합니다.
     - binary text classification task에서 주황색은 positive로 예측된 샘플들, 보라색은 negative로 예측된 샘플들입니다. NLI task에서 주황색은 entailment, 보라색은 contradiction, 초록색은 neutral로 예측된 샘플들입니다.
     
-    <img src="../assets/imgs/2024-05-03-Attention_Explanations/image 1.png">
+    <img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-05-03-Attention_Explanations/image 1.png">
     
 - 측정된 correlation은 약한 양의 상관관계를 가집니다. 그에 비해 attention weight과 LOO 결과는 일관되게 더 강한 상관관계를 가진다고 합니다.
 
@@ -66,22 +66,21 @@ Attention weight이 출력에 대한 상대적인 입력 중요도를 나타낸�
 
 - randomly permuting attention weights
     
-    <img src="../assets/imgs/2024-05-03-Attention_Explanations/image 2.png">
+    <img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-05-03-Attention_Explanations/image 2.png">
     
     - 이 세팅에서는 다른 모든 것들은 고정한 채로 attention weights만을 랜덤하게 섞어 모델의 출력이 변하는지를 관찰합니다.
     
-    <img src="../assets/imgs/2024-05-03-Attention_Explanations/image 3.png">
+    <img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-05-03-Attention_Explanations/image 3.png">
     
     - 결과는 큰 차이를 보이지 않았습니다.
 - adversarial attention weights
     - 일반적으로 adversarial attack은 원하는 objective function을 최대로 하면서 설정한 constraint을 만족하는 입력을 찾는 과정을 말합니다. 이 세팅에서는 objective function은 attention weight 사이의 divergence 값, constraint은 원래 출력과 변한 출력의 total variance distance (TVD) 사이의 norm 값으로 설정하여 출력을 최대한 바꾸지 않는 attention weight 값을 찾는 것을 목적으로 합니다. 다시 말하면, attention weight에 큰 변화를 주었지만 출력은 변하지 않는 상황을 찾는 것입니다.
     - 참고로, any two categorical distributions의 JS Divergence 값은 0.69의 상한값을 갖습니다.
     
-    <img src="../assets/imgs/2024-05-03-Attention_Explanations/image 4.png">
+    <img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-05-03-Attention_Explanations/image 4.png">
+    <img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-05-03-Attention_Explanations/image 5.png">
     
-    <img src="../assets/imgs/2024-05-03-Attention_Explanations/image 5.png">
-    
-    <img src="../assets/imgs/2024-05-03-Attention_Explanations/image 6.png">
+    <img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-05-03-Attention_Explanations/image 6.png">
     
     - 결과는 위와 같습니다. 많은 max JSD 값이 상한선인 0.69에 쏠려있는 것을 확인할 수 있습니다. 이는 모델의 출력을 유지하면서 아예 다른 attention weight 값을 찾는 것이 쉽게 가능함을 의미합니다.
     
