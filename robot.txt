@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+https://sbrblee.github.io/SAILAB-freshmen-study.github.io/sitemap.xml
