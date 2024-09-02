@@ -51,8 +51,8 @@ Transformer의 핵심 구성 요소인 attention mechanism은 입력과 입력 �
     <img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-05-03-Attention_Explanations/image.png">
 
     - $\hat\alpha$: attention weight
-    - $g:=\{g_{t=1}^T\}$: gradient-based feature importance
-    - $\Delta\hat y:=\{\Delta \hat y_t\}_{t=1}^T$: differences in model output by leave-one-out (LOO)
+    - $g:=\l g_{t=1}^T\r$: gradient-based feature importance
+    - $\Delta\hat y:=\l \Delta \hat y_t\r_{t=1}^T$: differences in model output by leave-one-out (LOO)
 - 따라서 우리는 각 입력마다 시간축(t)을 따라 rank correlation을 계산합니다. 데이터셋 크기만큼의 correlation coefficient를 얻을 수 있으며, 이를 히스토그램으로 나타내면 아래와 같습니다.
     - 그림에서는 attention weight과 gradient-based feature importance 사이의 다양한 dataset, task에서의 상관관계를 나타내며, LOO와의 상관관계를 나타낸 figure는 비슷한 개형을 보인다고 합니다.
     - binary text classification task에서 주황색은 positive로 예측된 샘플들, 보라색은 negative로 예측된 샘플들입니다. NLI task에서 주황색은 entailment, 보라색은 contradiction, 초록색은 neutral로 예측된 샘플들입니다.
