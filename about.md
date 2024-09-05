@@ -19,6 +19,13 @@ permalink: /about/
 - **e-mail**: ojoo_o@kaist.ac.kr
 - **Personal homepage**: https://github.com/ojoo-J
 
+### Chanwoo Lee
+
+- Master program student in KAIST Kim Jaechul AI Graduate School (from 2023.8~)
+- **Research interests**: Explainable AI
+- **e-mail**: shiningstone23@kaist.ac.kr
+- **Personal homepage**: https://github.com/shiningstone23
+
 ### Name
 
 - Current Status
