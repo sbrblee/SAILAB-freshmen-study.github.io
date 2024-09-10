@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "[Anthropic Article] Article 리뷰 - Softmax Linear Units"
+title: "[논문리뷰] Softmax Linear Units"
 date: 2024-07-26 00:00:00 +0900
 author: Chanwoo Lee
-categories: ["Mechanistic Interpretability"]
+categories: ["Mechanistic Interpretability", "Antropic"]
 use_math: true
 ---
 **Activation Function을 바꿔서 Monosemantic한 LLM 만들기**
