@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "[XAI] 논문리뷰 - Attention is not Explanation"
+title: "[논문리뷰] Attention is not Explanation"
 date: 2024-05-03 00:00:00 +0900
 author: Subeen Lee
-categories: ["Attention Mechanism"]
+categories: ["XAI", "Attention Mechanism"]
 use_math: true
 ---
 **Is attention explanation?**
