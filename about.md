@@ -26,7 +26,12 @@ permalink: /about/
 - **e-mail**: shiningstone23@kaist.ac.kr
 - **Personal homepage**: https://github.com/shiningstone23
 
-### Name
+### Seongwook Chung
+
+- Integrated program student in KAIST Kim Jaechul AI Graduate School (from 2024.2~)
+- **Research interests**: Explainable AI
+- **e-mail**: seongwook.chung@kaist.ac.kr
+- **Personal homepage**: -
 
 - Current Status
 - **Research interests**: -
