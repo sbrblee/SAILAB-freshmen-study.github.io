@@ -33,6 +33,8 @@ permalink: /about/
 - **e-mail**: seongwook.chung@kaist.ac.kr
 - **Personal homepage**: -
 
+### Name
+
 - Current Status
 - **Research interests**: -
 - **e-mail**: -
