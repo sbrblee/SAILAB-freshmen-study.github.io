@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "[XAI] 논문리뷰 - Toy Models of Superposition"
+title: "[논문리뷰] Toy Models of Superposition"
 date: 2024-08-23 00:00:00 +0900
-author: Jisu Yeo(Section 0~4), Ted Jung(Section 5~11)
+author: Jisu Yeo, Ted Jung
 categories: ["Mechanistic Interpretability", "Antropic"]
 use_math: true
 ---
@@ -43,14 +43,15 @@ Nelson Elhage, et al., (2022). [**Toy Models of Superposition**](https://transfo
 - Sparsity가 클수록 model은 dimension에 비해 더 많은 feature를 표현할 수 있다. (즉, superposition이 발생한다. )
 - 나중에 언급이 되지만, sparsity가 클수록 feature가 **0이 될 확률이 높아서,  더 많은 특징들로 모델**을 표현할 수 있다.
 
-![image.png](Toy%20Models%20of%20Superposition%20732622bbf97b4f4aa4496be08b258d54/image.png)
+<img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-08-23-Toy_Models_of_Superposition/Untitled-1.png">
+
 
 - 이 그림은 2차원에서 중요도가 서로 다른 5개의 feature embedding을 학습하는 토이 모델을 가정
 - 첫번째 그림: 모델이 가장 중요한 두개의 feature만 표현하는 방법을 학습할 수 있다는 것을 보여줌. 나머지 덜 중요한 세개의 feature는 embedding 되지 않고, 중요한 2개의 feature만 orthogonal하게 표현.
 - 두번째 그림: 가장 덜 중요한 feature 1개는 0에 매핑하고, 나머지 4개의 특징들은 최대한 서로 멀리 떨어질 수 있게 매핑.
 - 세번째 그림: 이제 모든 특징들이 서로 간섭하며 하나의 공간에 오버랩되어 표현.
     
-    즉, sparsity를 높임으로써, 차원에 비해 더 많은 feature를 embedding할 수 있고, 대신 interference가 발생할 수 있음을 나타냅니다. 
+즉, sparsity를 높임으로써, 차원에 비해 더 많은 feature를 embedding할 수 있고, 대신 interference가 발생할 수 있음을 나타냅니다. 
     
 
 ### Empirical Phenomena
@@ -93,14 +94,15 @@ Nelson Elhage, et al., (2022). [**Toy Models of Superposition**](https://transfo
     - **Linear representations make features "linearly accessible."**
     - **Statistical Efficiency.**
 
-superposition은 **linear representation**이 많은 특징을 저장할 수 있다는 개념으로, 신경망이 더 많은 정보를 저장하고 처리할 수 있게 해준다. 
+- superposition은 **linear representation**이 많은 특징을 저장할 수 있다는 개념으로, 신경망이 더 많은 정보를 저장하고 처리할 수 있게 해준다. 
 
 ### Privileged vs Non-privileged Bases
 
 > privileged basis에서는 뉴런의 해석 가능성(즉, 뉴런이 어떤 특징에 반응하는지 이해할 수 있는 가능성)이 더 높아지지만, non-privileged basis에서는 이러한 해석이 어려워진다.
 > 
 
-![image.png](Toy%20Models%20of%20Superposition%20732622bbf97b4f4aa4496be08b258d54/image%201.png)
+<img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-08-23-Toy_Models_of_Superposition/Untitled-2.png">
+
 
 ### The Superposition Hypothesis
 
@@ -124,7 +126,8 @@ superposition은 **linear representation**이 많은 특징을 저장할 수 있
 
 - Goal: Neural network가 높은 차원 벡터 → 낮은 차원 벡터 project → 다시 높은 차원으로 recover할 수 있는지를 탐구.
 
-![Screenshot 2024-08-14 at 11.54.29 AM.png](Toy%20Models%20of%20Superposition%20732622bbf97b4f4aa4496be08b258d54/Screenshot_2024-08-14_at_11.54.29_AM.png)
+<img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-08-23-Toy_Models_of_Superposition/Untitled-3.png">
+
 
 #### Feature Vector($X$)
 
@@ -141,7 +144,8 @@ superposition은 **linear representation**이 많은 특징을 저장할 수 있
 
 → Superposition hypothesis를 검증하기 위해 두 가지 모델을 비교.
 
-![스크린샷 2024-08-23 오전 3.27.12.png](Toy%20Models%20of%20Superposition%20732622bbf97b4f4aa4496be08b258d54/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-08-23_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%258C%25E1%2585%25A5%25E1%2586%25AB_3.27.12.png)
+<img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-08-23-Toy_Models_of_Superposition/Untitled-4.png">
+
 
 - Linear Model: superposition이 발생하지 않음.
 - ReLU Output Model: superposition이 발생.
@@ -160,7 +164,8 @@ superposition은 **linear representation**이 많은 특징을 저장할 수 있
 
 #### Loss function
 
-![스크린샷 2024-08-15 오후 4.34.12.png](Toy%20Models%20of%20Superposition%20732622bbf97b4f4aa4496be08b258d54/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-08-15_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_4.34.12.png)
+<img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-08-23-Toy_Models_of_Superposition/Untitled-5.png">
+
 
 - 여러 input(x)이 있고, 각 input의 여러 feature들($x_i$)에 대한 예측, 실제 차이를 나타냄.
 - 더 중요한 feature에 더 많은 가중치를 부여함으로써, 중요한 특징을 더 기억하는 역할인듯
@@ -172,7 +177,7 @@ superposition은 **linear representation**이 많은 특징을 저장할 수 있
 
 **모델의 결과 시각화하는 간단한 방법**
 
-![image.png](Toy%20Models%20of%20Superposition%20732622bbf97b4f4aa4496be08b258d54/image%202.png)
+<img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-08-23-Toy_Models_of_Superposition/Untitled-6.png">
 
 - $W^TW$
     - **가장 중요한 특징**들이 identity matrix로 나타나며, 덜 중요한 것들은 0으로 표시됨.
@@ -181,7 +186,7 @@ superposition은 **linear representation**이 많은 특징을 저장할 수 있
 
 **Superposition 현상의 시각화**
 
-![image.png](Toy%20Models%20of%20Superposition%20732622bbf97b4f4aa4496be08b258d54/image%203.png)
+<img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-08-23-Toy_Models_of_Superposition/Untitled-7.png">
 
 - 앞서, $W_i$는 특정 특징($x_i$)에 해당하는 방향을 나타낸다고 했음.
 - 특징이 완전히 표현되었다면 norm $||W_i||$ 값이 1을 가지고, 표현되지 못했다면, 0을 가짐.
@@ -191,7 +196,7 @@ superposition은 **linear representation**이 많은 특징을 저장할 수 있
 
 여기서는 특징의 개수(n = 20), dimension (m=5), 중요도($I_i = 0.7^i$)를 설정
 
-![image.png](Toy%20Models%20of%20Superposition%20732622bbf97b4f4aa4496be08b258d54/image%204.png)
+<img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-08-23-Toy_Models_of_Superposition/Untitled-8.png">
 
 - 그림 해석
     
@@ -223,7 +228,7 @@ superposition은 **linear representation**이 많은 특징을 저장할 수 있
 
 - Definition of loss function
 
-![image.png](Toy%20Models%20of%20Superposition%20732622bbf97b4f4aa4496be08b258d54/image%205.png)
+<img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-08-23-Toy_Models_of_Superposition/Untitled-9.png">
 
 - Feature benefit
     - 특정 feature를 정확하게 표현할 때 얻을 수 있는 성능 향상.
@@ -240,7 +245,7 @@ superposition은 **linear representation**이 많은 특징을 저장할 수 있
 
 - Definition of loss function
     
-    ![스크린샷 2024-08-15 오후 6.10.45.png](Toy%20Models%20of%20Superposition%20732622bbf97b4f4aa4496be08b258d54/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-08-15_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_6.10.45.png)
+    <img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-08-23-Toy_Models_of_Superposition/Untitled-10.png">
     
     여기서 x는 $x_i = 0$ 일 확률이 $S$인 분포에 따라 분포됨. 
     
@@ -248,7 +253,7 @@ superposition은 **linear representation**이 많은 특징을 저장할 수 있
     
     즉, 각 k-sparse 벡터(k개의 요소가 0이 아닌 벡터)에 대한 손실이 각각의 항으로 표현됨. 
     
-    ![스크린샷 2024-08-15 오후 6.11.02.png](Toy%20Models%20of%20Superposition%20732622bbf97b4f4aa4496be08b258d54/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-08-15_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_6.11.02.png)
+    <img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-08-23-Toy_Models_of_Superposition/Untitled-11.png">
     
     만약 S가 1로 가면, L1과 L0가 우세한 term이고, 이때 L0는 zero vector에 대한 손실함수라, L1 term을 유심히 살펴보면 된다. 
     
@@ -256,7 +261,7 @@ superposition은 **linear representation**이 많은 특징을 저장할 수 있
     
     : 1-sparse 벡터에 대한 손실. (0이 아닌 요소가 하나만 있는 벡터)
     
-    ![image.png](Toy%20Models%20of%20Superposition%20732622bbf97b4f4aa4496be08b258d54/image%206.png)
+    <img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-08-23-Toy_Models_of_Superposition/Untitled-12.png">
     
     **Feature benefit** term: bias 역할은 모델이 feature를 표현하지 못하는 경우, expected value를 가질 수 있도록한다. 
     
@@ -276,7 +281,7 @@ superposition은 **linear representation**이 많은 특징을 저장할 수 있
 - Feature is learned, and given a dedicated dimension
 - Feature is learned, and represented in superposition
     
-    ![스크린샷 2024-08-20 오후 10.31.14.png](Toy%20Models%20of%20Superposition%20732622bbf97b4f4aa4496be08b258d54/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-08-20_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_10.31.14.png)
+    <img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-08-23-Toy_Models_of_Superposition/Untitled-13.png">
     
     ⇒ 이 세 가지 결과 사이의 전환은 급격하게 일어나며, 이는 마치 물리학에서의 Phase Change와 유사한 현상으로 볼 수 있습니다.
     
@@ -289,7 +294,7 @@ y 축은 모든 (첫번째, 두번째 ) feature의 Density를 0.01 to 1.0로 변
     
     두 번째 feature가 위 세가지 결과 중 어떻게 학습되었는지를 관찰함. 
     
-    ![스크린샷 2024-08-20 오후 10.31.42.png](Toy%20Models%20of%20Superposition%20732622bbf97b4f4aa4496be08b258d54/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-08-20_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_10.31.42.png)
+    <img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-08-23-Toy_Models_of_Superposition/Untitled-14.png">
     
 - 이 실험 결과를 이론적인 "toy model"과 비교하면 다음과 같다.
     
@@ -299,7 +304,7 @@ y 축은 모든 (첫번째, 두번째 ) feature의 Density를 0.01 to 1.0로 변
     - W = [0, 1] → 첫번째 feature를 버리는 것.
     - W = [1, -1] → 두 feature 모두 고려하는 것. superposition에 넣는 것. ⇒ 이 경우 두 벡터는 서로 반대 방향으로 배치되며, 이 방법을 "양극 쌍(antipodal pair)"이라고 부름.
     
-    ![스크린샷 2024-08-20 오후 10.31.59.png](Toy%20Models%20of%20Superposition%20732622bbf97b4f4aa4496be08b258d54/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-08-20_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_10.31.59.png)
+    <img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-08-23-Toy_Models_of_Superposition/Untitled-15.png">
     
 
 ## (Section 4) The Geometry of Superposition
@@ -313,11 +318,11 @@ y 축은 모든 (첫번째, 두번째 ) feature의 Density를 0.01 to 1.0로 변
 - 모델이 학습한 특징의 수는 **Frobenius norm** $\| W \|_F^2$ 을 사용하여 측정. 특징이 표현된 정도를 측정하며, 1에 가까울 때 특징이 잘 표현된거고, 0에 가까울 때 특징이 잘 표현안된 것.
 - Average number of **dimensions per feature - 특징당 차원 수**
     
-    ![스크린샷 2024-08-16 오후 4.11.19.png](Toy%20Models%20of%20Superposition%20732622bbf97b4f4aa4496be08b258d54/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-08-16_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_4.11.19.png)
+    <img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-08-23-Toy_Models_of_Superposition/Untitled-16.png">
     
     - 그래프
     
-    ![image.png](Toy%20Models%20of%20Superposition%20732622bbf97b4f4aa4496be08b258d54/image%207.png)
+    <img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-08-23-Toy_Models_of_Superposition/Untitled-17.png">
     
     S를 바꿔가면서 $D^*$을 plot한 그래프.  
     
@@ -336,7 +341,7 @@ y 축은 모든 (첫번째, 두번째 ) feature의 Density를 0.01 to 1.0로 변
     
     $D_i$는 개별 i번째 특징에 대한 dimensonality를 나타낸 것. 
     
-    ![스크린샷 2024-08-16 오후 4.11.40.png](Toy%20Models%20of%20Superposition%20732622bbf97b4f4aa4496be08b258d54/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-08-16_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_4.11.40.png)
+    <img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-08-23-Toy_Models_of_Superposition/Untitled-18.png">
     
     - $W_i$ : weight vector column associated with the $i$th feature
     - $W$  hat : unit version of that vector
@@ -346,7 +351,7 @@ y 축은 모든 (첫번째, 두번째 ) feature의 Density를 0.01 to 1.0로 변
     ex) antipodal pair의 경우, 학습된 feature는 $D_1$ = 1/(1+1), 학습되지 않은 feature는 $D_2$  = 0 
     
 
-![image.png](Toy%20Models%20of%20Superposition%20732622bbf97b4f4aa4496be08b258d54/image%208.png)
+<img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-08-23-Toy_Models_of_Superposition/Untitled-19.png">
 
 - 위에서 사용했던 선형 플롯 사용. 이 선형 플롯 위에 개별 feature의 차원성에 대한 scatter plot을 오버레이한다. (각 피처가 다양한 희소성 수준에서 모델에 대해 가지는 차원성을 표시하는 것.)
 - 특징의 차원성이 특정 비율에 클러스터링되는 경향이 있고, 이는 특정 기하 구조에 해당.
@@ -366,7 +371,7 @@ y 축은 모든 (첫번째, 두번째 ) feature의 Density를 0.01 to 1.0로 변
     
     Thomson 해답은 Tegum Product로 이해될 수 있다.  이는 두 다면체를 직교하는 차원에서 임베딩하여, 작은 균일 다면체로 만드는 연산입니다.
     
-    ![image.png](Toy%20Models%20of%20Superposition%20732622bbf97b4f4aa4496be08b258d54/image%209.png)
+    <img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-08-23-Toy_Models_of_Superposition/Untitled-20.png">
     
     예를 들어, 삼각형 이중피라미드는 삼각형과 양극 쌍의 Tegum Product로, 오각형 이중피라미드는 오각형과 양극 쌍의 Tegum Product로 나타납니다. 이런 방식으로 두 개의 하위 그래프는 서로 간섭하지 않습니다.
     
@@ -392,7 +397,7 @@ y 축은 모든 (첫번째, 두번째 ) feature의 Density를 0.01 to 1.0로 변
 - 초기 상태에서는, 모든 특징이 균일한 중요도(I = 1)와 활성화 density(1 - S = 0.05)를 가지며, 이때 정오각형(Pentagon)의 구조를 형성.
 - 특정한 하나의 feature의 Sparsity를 변화시키다보면,  Pentagon ↔ Digon 구조로 전환이 됨.
 
-![스크린샷 2024-08-23 오전 6.23.44.png](Toy%20Models%20of%20Superposition%20732622bbf97b4f4aa4496be08b258d54/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-08-23_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%258C%25E1%2585%25A5%25E1%2586%25AB_6.23.44.png)
+<img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-08-23-Toy_Models_of_Superposition/Untitled-21.png">
 
 ### Correlated and Anti-correlated Features
 
@@ -414,7 +419,7 @@ y 축은 모든 (첫번째, 두번째 ) feature의 Density를 0.01 to 1.0로 변
 - **직교할 수 없을 때 상관된 특징(Correlated Features)의 나란한 배치**:
     - 모델은 상관된 특징들이 가능한 한 가까이 배치되도록 구성합니다. 만약 공간에 충분한 차원이 없다면, 이들 특징들은 나란히 배치되며, 이는 양의 간섭(Positive Interference)이 발생할 수 있음을 시사.
 
-![image.png](Toy%20Models%20of%20Superposition%20732622bbf97b4f4aa4496be08b258d54/image%2010.png)
+<img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-08-23-Toy_Models_of_Superposition/Untitled-22.png">
 
 ## (Section 5) Superposition and Learning Dynamics
 
@@ -432,14 +437,14 @@ y 축은 모든 (첫번째, 두번째 ) feature의 Density를 0.01 to 1.0로 변
         - Loss curve가 급격히 하락한다
     - Loss curve의 부드러운 감소가 여러 작은 특징 jump들로 구성되어 있다고 추측한다
 
-![Screenshot 2024-08-14 at 5.04.32 PM.png](Toy%20Models%20of%20Superposition%20732622bbf97b4f4aa4496be08b258d54/Screenshot_2024-08-14_at_5.04.32_PM.png)
+<img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-08-23-Toy_Models_of_Superposition/Untitled-23.png">
 
 #### Phenomenon 2: Learning as Geometric Transformations
 
 - 일부 경우에서 기하학적 구조로 이어지는 learning dynamics를 sequence of geometric transformations로 이해할 수 있다
     - Correlated features - 학습이 loss curve에서 관찰 가능한 여러 단계로 진행된다
 
-![Screenshot 2024-08-21 at 9.21.27 PM.png](Toy%20Models%20of%20Superposition%20732622bbf97b4f4aa4496be08b258d54/Screenshot_2024-08-21_at_9.21.27_PM.png)
+<img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-08-23-Toy_Models_of_Superposition/Untitled-24.png">
 
 ## (Section 6) Relationship to Adversarial Robustness
 
@@ -451,7 +456,7 @@ y 축은 모든 (첫번째, 두번째 ) feature의 Density를 0.01 to 1.0로 변
     - Superposition이 형성됨에 따라 adversarial example에 대한 취약성이 (vulnerability) 급격히 증가한다
         - 차원당 특징수 ($\frac{1}{특징 차원성}$)와 비슷하게 연관된다
 
-![Screenshot 2024-08-14 at 5.17.17 PM.png](Toy%20Models%20of%20Superposition%20732622bbf97b4f4aa4496be08b258d54/Screenshot_2024-08-14_at_5.17.17_PM.png)
+<img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-08-23-Toy_Models_of_Superposition/Untitled-25.png">
 
 - Superposition과 관련된 여러 현항 (phenomena)로부터 adversarial example를 예측할 수 있다
     - 이러한 예제들이 존재하는 이유를 설명 할 수 있다
@@ -471,9 +476,9 @@ y 축은 모든 (첫번째, 두번째 ) feature의 Density를 0.01 to 1.0로 변
         - 특징이 구조적으로 neuron과 align된다
         - 많은 neuron이 하나의 특징을 표현한다 (monosemantic)
 
-![Screenshot 2024-08-22 at 9.29.19 PM.png](Toy%20Models%20of%20Superposition%20732622bbf97b4f4aa4496be08b258d54/Screenshot_2024-08-22_at_9.29.19_PM.png)
+<img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-08-23-Toy_Models_of_Superposition/Untitled-26.png">
 
-![Screenshot 2024-08-14 at 5.37.32 PM.png](Toy%20Models%20of%20Superposition%20732622bbf97b4f4aa4496be08b258d54/Screenshot_2024-08-14_at_5.37.32_PM.png)
+<img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-08-23-Toy_Models_of_Superposition/Untitled-27.png">
 
 #### Visualizing Superposition in Terms of Neurons
 
@@ -484,11 +489,11 @@ y 축은 모든 (첫번째, 두번째 ) feature의 Density를 0.01 to 1.0로 변
             - 높이는 절댓값에 해당한다
         - 사각형의 색깔은 작용하는 특징을 나타낸다
 
-![Screenshot 2024-08-14 at 5.41.57 PM.png](Toy%20Models%20of%20Superposition%20732622bbf97b4f4aa4496be08b258d54/Screenshot_2024-08-14_at_5.41.57_PM.png)
+<img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-08-23-Toy_Models_of_Superposition/Untitled-28.png">
 
 - 어떤 sparsity 값 범위를 보면 그 data로 훈련된 모든 모델의 optimal solution은 같은 weight configuration을 가진다.
 
-![Screenshot 2024-08-14 at 5.45.58 PM.png](Toy%20Models%20of%20Superposition%20732622bbf97b4f4aa4496be08b258d54/Screenshot_2024-08-14_at_5.45.58_PM.png)
+<img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-08-23-Toy_Models_of_Superposition/Untitled-29.png">
 
 - Sparsity level이 높아질수록 monosemantic에서 polysemantic neuron으로의 전환이 발생한다
     - Neuron-level phase change
@@ -510,7 +515,7 @@ y 축은 모든 (첫번째, 두번째 ) feature의 Density를 0.01 to 1.0로 변
     - 모델이 계산을 수행하도록 한다  ($y = |x|$)
         - ReLU neuron을 사용하여 계산하는 간단한 방법: $|x| = ReLU(x) + ReLU(-x)$
 
-![Screenshot 2024-08-14 at 7.59.47 PM.png](Toy%20Models%20of%20Superposition%20732622bbf97b4f4aa4496be08b258d54/Screenshot_2024-08-14_at_7.59.47_PM.png)
+<img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-08-23-Toy_Models_of_Superposition/Untitled-30.png">
 
 ### Experiment Setup
 
@@ -522,19 +527,19 @@ y 축은 모든 (첫번째, 두번째 ) feature의 Density를 0.01 to 1.0로 변
 - Neuron 측면에서 가중치를 visualize한다
     - Or a stack plot (전과 같이) or a graph
 
-![Screenshot 2024-08-14 at 8.05.52 PM.png](Toy%20Models%20of%20Superposition%20732622bbf97b4f4aa4496be08b258d54/Screenshot_2024-08-14_at_8.05.52_PM.png)
+<img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-08-23-Toy_Models_of_Superposition/Untitled-31.png">
 
 - 모델은 양수 neuron ReLU와 음수 neuron ReLU를 구성한다
 - Without superposition, the model needs two hidden layer neurons to implement absolute value on one feature.
 
-![Screenshot 2024-08-14 at 8.06.15 PM.png](Toy%20Models%20of%20Superposition%20732622bbf97b4f4aa4496be08b258d54/Screenshot_2024-08-14_at_8.06.15_PM.png)
+<img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-08-23-Toy_Models_of_Superposition/Untitled-32.png">
 
 ### Superposition vs Sparsity
 
 - 가중치의 절대값을 나타내는 stack plot을 보여준다
     - Polysemanticity에 따라 색이 흐릿하게 표시된다
 
-![Screenshot 2024-08-14 at 8.13.41 PM.png](Toy%20Models%20of%20Superposition%20732622bbf97b4f4aa4496be08b258d54/Screenshot_2024-08-14_at_8.13.41_PM.png)
+<img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-08-23-Toy_Models_of_Superposition/Untitled-33.png">
 
 - Activation function은 privileged basis를 생성한다 (monosemantic)
     - 특징이 충분히 sparse해지면 이 모델도 superposition을 사용한다
@@ -672,15 +677,15 @@ y 축은 모든 (첫번째, 두번째 ) feature의 Density를 0.01 to 1.0로 변
 - 수빈
     - Demonstrating superposition >> bias vector가 0 또는 expected value인 이유?
         
-        ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/09509cc0-06ef-46ec-9aa0-8c6023c733b2/e2883bb8-efc1-461e-b020-8e1057a3b132/image.png)
+        <img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-08-23-Toy_Models_of_Superposition/Untitled-34.png">
         
     - The Geometry of Superposition >> 1/2 ⇒ antipodal effect
         
-        ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/09509cc0-06ef-46ec-9aa0-8c6023c733b2/8d4e88d3-53bb-42c5-ac81-835f0f9c18e8/image.png)
+        <img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-08-23-Toy_Models_of_Superposition/Untitled-35.png">
         
     - Computation in superposition >> sparsity가 높은 이 모델에서 정확도는 괜찮게 나오는지 우려가 됨
         
-        ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/09509cc0-06ef-46ec-9aa0-8c6023c733b2/e22b20e3-8683-459c-b848-491cdebdad1b/image.png)
+        <img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-08-23-Toy_Models_of_Superposition/Untitled-36.png">
 
 - 연지
     - Basic results 그림 해석이 궁금합니다.
