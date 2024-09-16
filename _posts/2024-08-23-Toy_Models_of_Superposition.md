@@ -7,7 +7,7 @@ categories: ["Mechanistic Interpretability", "Antropic"]
 use_math: true
 ---
 
-** Explore when and how superposition occurs in a Transformer using a toy model. **
+**Explore when and how superposition occurs in a Transformer using a toy model.**
 
 이 포스트에서는 아래 논문을 다룹니다.
 
