@@ -33,6 +33,13 @@ permalink: /about/
 - **e-mail**: seongwook.chung@kaist.ac.kr
 - **Personal homepage**: -
 
+### Jisu Yeo
+
+- Internship program student in KAIST Kim Jaechul AI Graduate School (from 2024.7~)
+- **Research interests**: Time Series Analysis, Explainable AI
+- **e-mail**: yeoji1503@gmail.com
+- **Personal homepage**: https://github.com/YeoJiSu
+
 ### Name
 
 - Current Status
