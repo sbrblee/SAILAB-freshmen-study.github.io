@@ -25,7 +25,7 @@ Nelson Elhage, et al., (2022). [**Toy Models of Superposition**](https://transfo
 ## (Section 1) Definitions and Motivation: Features, Directions, and Superposition
 이 논문은 신경망의 표현에 대해 **linear representation hypothesis**를 가정.
 
-- **신경망의 표현**을 **선형적**으로 이해할 수 있다는 가설이 존재합니다. 즉, 입력의 **특징**이 **활성화 공간에서 방향으로 표현**된다는 것입니다.
+- 신경망의 표현을 **선형적**으로 이해할 수 있다는 가설이 존재합니다. 즉, 입력의 **특징**이 **활성화 공간에서 방향으로 표현**된다는 것입니다.
 - 이 가설의 중요한 두 가지 속성: **Decomposability, Linearity**
     - **Decomposability**: 신경망의 표현이 독립적으로 이해할 수 있는 특징들로 설명될 수 있음.
     - **Linearity**: 이러한 특징들이 활성화 공간에서 특정 방향으로 표현됨.
@@ -106,7 +106,7 @@ Nelson Elhage, et al., (2022). [**Toy Models of Superposition**](https://transfo
 
 ### The Superposition Hypothesis
 
-> 신경망이 **제한된 수의 뉴런(즉, 제한된 차원)**을 가지고도 더 많은 특징을 표현하기 위해 **고차원 공간**의 특성을 활용한다고 설명하며, superposition이 polysemantic 특성을 가진다를 설명.
+> 신경망이 제한된 수의 뉴런(즉, 제한된 차원)을 가지고도 더 많은 특징을 표현하기 위해 **고차원 공간**의 특성을 활용한다고 설명하며, superposition이 polysemantic 특성을 가진다를 설명.
 > 
 - **Polysemantic Neurons**
     - privileged basis가 있는 경우에도, 뉴런들이 여러 가지 관련 없는 특징들에 반응하는 경우가 종종 있다.
@@ -206,7 +206,7 @@ Nelson Elhage, et al., (2022). [**Toy Models of Superposition**](https://transfo
     
     bias는 reconstruction error를 줄이기 위함. ex) (1,0,0)에 $W$ 곱해서 더 작은 차원으로 매핑 → $W^T$ 곱해서 더 높은 차원으로 돌리는 과정에서 $W^TW$가 양수인 부분 때문에 (1, 0.3, 0.4) 처럼 제대로 복원이 안 돼서 bias가 (0, -0.3, -0.4)이렇게 학습되었을 것이다! 
     
-    $W^TW$를 보면, *sparsity*가 *1*에 **가까워질수록*(*커질수록*),* 특징 *xi*가 *0*이 **될 **확률이 **높다는 **것이고*,* 그러면 **더 **많은 **특징들로 **표현을 **할 **수 **있다. 더 많은 특징들로 표현하려다 보니, 그래서 WTW에 0이 아닌 부분이 많이 생기는 기는 것이고,  orthogonal하지 않은 feature들이 생겨나는 것이다. 
+    $W^TW$를 보면, sparsity가 1에 가까워질수록(커질수록),특징 xi가 0이 될 확률이 높다는 것이고, 그러면 더 많은 특징들로 표현을 할 수 있다. 더 많은 특징들로 표현하려다 보니, 그래서 $W^TW$ 에 0이 아닌 부분이 많이 생기는 기는 것이고,  orthogonal하지 않은 feature들이 생겨나는 것이다. 
     
 
 **Linear Model**
