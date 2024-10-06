@@ -1,4 +1,12 @@
-# 2024-03-29-XAI_Evaluation
+---
+layout: post
+title: "[논문리뷰] XAI Evaluation"
+date: 2024-03-29 00:00:00 +0900
+author: Yeonjea Kim
+categories: ["XAI", "Evaluation Methods"]
+use_math: true
+---
+**XAI Evaluation**
 
 설명 가능 인공지능(Explainable AI, XAI) 에 대한 포괄적인 총정리 : XAI 평가는 어떻게 해야할까? 활용할 수 있는 개념과 방법은 어떤 것이 있을까?
 
@@ -25,7 +33,7 @@ arxiv - [https://arxiv.org/abs/2201.08164](https://arxiv.org/abs/2201.08164)
 
 논문에서는 아래와 같이 XAI 방법을 6가지 디멘젼으로 구분합니다. 
 
-<img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-03-29-XAI_Explanation/01.png">
+<img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-03-29-XAI_Evaluation/01.png">
 
 Type of Problem : XAI 가 풀 수 있는 4 종류의 문제
 
@@ -44,7 +52,7 @@ Type of Method used to Explain : 모델을 설명하는 3 종류의 방법
 
 논문에서 정리한 설명 품질의 속성입니다.
 
-<img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-03-29-XAI_Explanation/02.png">
+<img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-03-29-XAI_Evaluation/02.png">
 
 - 01 Correctness : 진실성/충실성, 예측정확도가 아닌 설명정확도
 - 02 Completeness : 모델 f 를 얼마나 설명하는지. 이상적인 것은 “the whole truth”
@@ -70,11 +78,11 @@ Type of Method used to Explain : 모델을 설명하는 3 종류의 방법
 
 논문에는 아래와 같은 방식으로 Co-12카테고리와 - XAI 방법 - 사용한 논문들을 정리해두어서 참고할 수 있습니다.
 
-<img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-03-29-XAI_Explanation/03.png">
+<img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-03-29-XAI_Evaluation/03.png">
 
 XAI 방법은 때로는 여러가지 Co-12 속성에 속하기도 하며 아래 테이블을 통해 확인할 수 있습니다.
 
-<img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-03-29-XAI_Explanation/04.png">
+<img src="https://sbrblee.github.io/SAILAB-freshmen-study.github.io/imgs/2024-03-29-XAI_Evaluation/04.png">
 
 ### Discussion & Conclusion
 
